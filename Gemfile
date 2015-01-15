@@ -11,9 +11,10 @@ gem 'state_machine', '~> 1.2.0'
 
 gem 'sprockets-rails', github: 'rails/sprockets-rails'
 gem 'coffee-rails',    github: 'rails/coffee-rails'
-gem 'sass-rails',      github: 'rails/sass-rails'
 
-gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'sass-rails', '>= 3.2'
+gem 'autoprefixer-rails'
 
 gem 'faker'
 gem 'uglifier'
@@ -21,16 +22,14 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.0.1'
 
-# gem 'the_string_to_slug', path: "../../../the_string_to_slug"
-
 gem 'the_role',
-  path: '../../'
+  path: '../TheRoleApi'
   # "~> 2.5.3"
 
 gem 'the_role_bootstrap3_ui',
-  # path: "path: '../../../../../the_role_bootstrap3_ui"
-  github: 'the-teacher/the_role_bootstrap3_ui',
-  branch: 'master'
+  path: "../TheRoleManagePanelBootstrap3"
+  # github: 'the-teacher/the_role_bootstrap3_ui',
+  # branch: 'master'
 
 group :development do
   gem 'pry-rails'
