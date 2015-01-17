@@ -7,18 +7,5 @@ class Page < ActiveRecord::Base
   validates :title,   presence: true, uniqueness: true
   validates :content, presence: true
 
-  state_machine :state, :initial => :draft do
-    # events
-    event :to_draft do 
-      transition all => :draft
-    end
-
-    event :to_published do
-      transition all => :published
-    end
-
-    event :to_deleted do
-      transition all => :deleted
-    end
-  end
+  scope :with_state, ->(states) { where state: Array.wrap(states) }
 end
