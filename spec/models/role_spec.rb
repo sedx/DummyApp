@@ -1,11 +1,12 @@
 require 'spec_helper'
+require 'pry'
 
 describe Role do
   context "Role *Create* methods" do
     it "New/Create invalid" do
       role = Role.new
       role.save.should be_false
-      
+
       role.should have(1).error_on(:name)
       role.should have(1).error_on(:title)
       role.should have(1).error_on(:description)
@@ -17,7 +18,7 @@ describe Role do
       role.name        = :user
       role.title       = :user_title
       role.description = :role_description
-      
+
       role.save.should be_true
     end
 
@@ -39,6 +40,28 @@ describe Role do
       role = FactoryGirl.create :role_without_rules
       role.the_role.should be_an_instance_of String
       role.to_hash.should  be_an_instance_of Hash
+    end
+
+    it "New/Create, role have to be stored in DB as JSON String" do
+      r = Role.create!(
+        name:  :test_name,
+        title: :test_title,
+        description: :test_description,
+        the_role: { any_section: { any_rule: true } }
+      )
+
+      r.the_role.class.should eq String
+      r.the_role.should eq "{\"any_section\":{\"any_rule\":true}}"
+
+      r = Role.create!(
+        name:  :test_name1,
+        title: :test_title1,
+        description: :test_description1,
+        the_role: "{\"any_section\":{\"any_rule\":false}}"
+      )
+
+      r.the_role.class.should eq String
+      r.the_role.should eq "{\"any_section\":{\"any_rule\":false}}"
     end
   end
 
@@ -72,7 +95,7 @@ describe Role do
     before(:each) do
       @role = FactoryGirl.create :role_user
     end
-    
+
     it "aliace methods" do
       @role.has?(:pages, :index).should      be_true
       @role.has_role?(:pages, :index).should be_true
@@ -114,7 +137,7 @@ describe Role do
     it "Role.with_name(:name) method" do
       Role.with_name(:user).should  be_an_instance_of Role
       Role.with_name('user').should be_an_instance_of Role
-      
+
       Role.with_name(:moderator).should  be_nil
       Role.with_name('moderator').should be_nil
     end
