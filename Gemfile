@@ -35,13 +35,12 @@ gem 'jbuilder', '~> 1.0.1'
 
 group :test do
   gem 'minitest'
+  gem "minitest-rails"
 
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
 
-  gem 'rspec',       '2.14.1'
-  gem 'rspec-core',  '2.14.4'
-  gem 'rspec-rails', '2.14.0'
+  gem 'rspec-rails', '~> 3.1.0'
 end
 
 # gem 'sprockets-rails', github: 'rails/sprockets-rails'
