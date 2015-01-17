@@ -4,18 +4,9 @@ rvm:
   - 2.0.0
   - 2.1.0
 
-  # - 2.2.0
-# gemfile: Gemfile
-
 gemfile:
   - Gemfile
   - gemfiles/4.0.gemfile
   - gemfiles/4.1.gemfile
 
 script: "bundle exec rake db:bootstrap && bundle exec rspec --format documentation"
-
-matrix:
-  fast_finish: true
-  allow_failures:
-    - rvm: 1.9.3
-    - rvm: 2.0.0

@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
-gemspec path: "../"
-
-gem 'rails', '4.1.0'
-
 # gem 'pg'
 # gem 'mysql2'
+# gemspec path: "../"
+
+gem 'rails', '4.1.0'
 gem 'sqlite3'
 
 gem 'devise'
