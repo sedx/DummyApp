@@ -231,7 +231,6 @@ DEPENDENCIES
   pg
   pry-rails
   rails (= 4.2.0)
-  rake (~> 10.4)
   rspec (= 2.14.1)
   rspec-core (= 2.14.4)
   rspec-rails (= 2.14.0)
