@@ -1,6 +1,29 @@
-## TheRole test App
+<h2 align="center" class='center' style="text-align:center">
+  TheRole/Dummy App. Development and testing
+</h2>
 
-App for development and testing TheRole gem
+<p align="center" class='center' style="text-align:center">
+  <b>Authorization gem for Ruby on Rails</b><br>
+  <i>with Administrative interface</i>
+</p>
+
+<p align="center" class='center' style="text-align:center">
+  <img src="./docs/the_role.png" alt="TheRole. Authorization gem for Ruby on Rails with Administrative interface">
+</p>
+
+<p align="center" class='center' style="text-align:center">
+  <b>Semantic. Flexible. Lightweigh</b>
+</p>
+
+<div align="center" class='center' style="text-align:center">
+
+<a href="http://badge.fury.io/rb/the_role"><img src="https://badge.fury.io/rb/the_role.svg" alt="Gem Version" height="18"></a> &nbsp;
+<a href="https://travis-ci.org/TheRole/DummyApp"><img src="https://travis-ci.org/TheRole/DummyApp.svg?branch=master" alt="Build Status" height="18"></a>
+&nbsp;
+<a href="https://codeclimate.com/github/the-teacher/the_role"><img src="https://codeclimate.com/github/the-teacher/the_role.png" alt="Code Climate" height="18"></a>
+&nbsp;
+<a href="https://www.ruby-toolbox.com/categories/rails_authorization">ruby-toolbox</a>
+</div>
 
 ### How to get?
 
