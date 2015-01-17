@@ -1,12 +1,23 @@
 language: ruby
+
+env:
+  - DB=sqlite
+  - DB=mysql
+  - DB=postgresql
+
 rvm:
-  - 1.9.3
-  - 2.0.0
   - 2.1.0
+  - 2.0.0
+  - 1.9.3
 
 gemfile:
   - Gemfile
-  - gemfiles/4.0.gemfile
   - gemfiles/4.1.gemfile
+  - gemfiles/4.0.gemfile
+
+before_script:
+  - mysql -e 'create database the_role'
+  - psql  -c 'create database the_role' -U postgres
+  - cp config/database.yml.ci config/database.yml
 
 script: "bundle exec rake db:bootstrap && bundle exec rspec --format documentation"
