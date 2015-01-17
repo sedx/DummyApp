@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.0'
+gemspec path: "../"
 
-gem 'sqlite3'
+gem 'rails', '4.1.0'
 
 # gem 'pg'
 # gem 'mysql2'
+gem 'sqlite3'
 
 gem 'devise'
 gem 'state_machine', '~> 1.2.0'
@@ -33,17 +34,11 @@ gem 'the_role_bootstrap3_ui',
   github: 'TheRole/TheRoleManagePanelBootstrap3',
   branch: 'master'
 
-group :development do
-  gem 'pry-rails'
-end
+gem 'minitest'
 
-group :test do
-  gem 'minitest'
+gem 'factory_girl_rails', '~> 4.0'
+gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git', tag: 'v1.0.0'
 
-  gem 'factory_girl_rails', '~> 4.0'
-  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git', tag: 'v1.0.0'
-
-  gem 'rspec', '2.14.1'
-  gem 'rspec-core', '2.14.4'
-  gem 'rspec-rails', '2.14.0'
-end
+gem 'rspec', '2.14.1'
+gem 'rspec-core', '2.14.4'
+gem 'rspec-rails', '2.14.0'
