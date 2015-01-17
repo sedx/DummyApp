@@ -2,16 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
 
+gem 'pg'
+gem 'mysql2'
 gem 'sqlite3'
-
-# gem 'pg'
-# gem 'mysql2'
 
 gem 'devise'
 gem 'state_machine', '~> 1.2.0'
-
-gem 'sprockets-rails', github: 'rails/sprockets-rails'
-gem 'coffee-rails',    github: 'rails/coffee-rails'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '>= 3.2'
@@ -47,3 +43,6 @@ group :test do
   gem 'rspec-core', '2.14.4'
   gem 'rspec-rails', '2.14.0'
 end
+
+# gem 'sprockets-rails', github: 'rails/sprockets-rails'
+# gem 'coffee-rails',    github: 'rails/coffee-rails'
