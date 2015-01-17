@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/TheRole/TheRoleApi.git
-  revision: 3f2a247bd922e3280ae0233b8ea439a6e5e79ca4
-  tag: v2.6
+  revision: 8564924e9bf62391e298126b8874903ab4751045
+  branch: master
   specs:
     the_role (2.6)
       multi_json
@@ -9,8 +9,8 @@ GIT
       the_string_to_slug (~> 1.2)
 
 GIT
-  remote: git://github.com/TheRole/TheRoleManagePanelBootstrap3.git
-  revision: 2aa187905d706d09f7392d8c9b18d092389e467b
+  remote: git://github.com/TheRole/TheRoleManagementPanelBootstrap3.git
+  revision: be04222dd95ed27f327e7a75c1e6b11f62721460
   branch: master
   specs:
     the_role_bootstrap3_ui (1.2)
