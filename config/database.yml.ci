@@ -20,3 +20,6 @@ defaults: &defaults
   timeout: 5000
   host: localhost
   <<: *<%= ENV['DB'] || "sqlite3" %>
+
+test:
+  <<: *defaults
