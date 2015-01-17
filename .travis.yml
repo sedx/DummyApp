@@ -2,5 +2,7 @@ language: ruby
 rvm:
   - 1.9.3
   - 2.0.0
+  - 2.1.0
+  - 2.2.0
 gemfile: Gemfile
-script: "RAILS_ENV=test rake db:bootstrap && RAILS_ENV=test spec --format documentation"
+ script: "bundle exec rake db:bootstrap && bundle exec rspec --format documentation"
