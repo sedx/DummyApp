@@ -1,4 +1,23 @@
 GIT
+  remote: git://github.com/TheRole/TheRoleApi.git
+  revision: 3f2a247bd922e3280ae0233b8ea439a6e5e79ca4
+  tag: v2.6
+  specs:
+    the_role (2.6)
+      multi_json
+      rails (>= 3, < 5)
+      the_string_to_slug (~> 1.2)
+
+GIT
+  remote: git://github.com/TheRole/TheRoleManagePanelBootstrap3.git
+  revision: 2aa187905d706d09f7392d8c9b18d092389e467b
+  branch: master
+  specs:
+    the_role_bootstrap3_ui (1.2)
+      haml
+      rails (>= 3, < 5)
+
+GIT
   remote: git://github.com/rails/coffee-rails.git
   revision: c05fb725613d96ce969c30a11e7b613e90f9e5e8
   specs:
@@ -21,21 +40,6 @@ GIT
   tag: v1.0.0
   specs:
     database_cleaner (1.0.0)
-
-PATH
-  remote: ../TheRoleApi
-  specs:
-    the_role (2.6)
-      multi_json
-      rails (>= 3, < 5)
-      the_string_to_slug (~> 1.2)
-
-PATH
-  remote: ../TheRoleManagePanelBootstrap3
-  specs:
-    the_role_bootstrap3_ui (1.2)
-      haml
-      rails (>= 3, < 5)
 
 GEM
   remote: https://rubygems.org/

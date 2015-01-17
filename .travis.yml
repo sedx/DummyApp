@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.0.0
+gemfile: spec/dummy_app/Gemfile
+script: "RAILS_ENV=test rake db:bootstrap  && rspec --format documentation"

@@ -23,13 +23,14 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.0.1'
 
 gem 'the_role',
-  path: '../TheRoleApi'
-  # "~> 2.5.3"
+  github: 'TheRole/TheRoleApi',
+  tag: 'v2.6'
+  # path: '../TheRoleApi'
 
 gem 'the_role_bootstrap3_ui',
-  path: "../TheRoleManagePanelBootstrap3"
-  # github: 'the-teacher/the_role_bootstrap3_ui',
-  # branch: 'master'
+  # path: "../TheRoleManagePanelBootstrap3"
+  github: 'TheRole/TheRoleManagePanelBootstrap3',
+  branch: 'master'
 
 group :development do
   gem 'pry-rails'
