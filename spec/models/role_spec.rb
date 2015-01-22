@@ -214,27 +214,32 @@ describe Role do
       expect(@role.has?(:pages, :index)).to  be_truthy
       expect(@role.has?(:pages, :update)).to be_truthy
 
-      expect(@role.any?({ pages: :index  })).to be_truthy
-      expect(@role.any?({ pages: :update })).to be_truthy
-      expect(@role.any?({ pages: :index, pages: :update})).to be_truthy
+      expect(@role.any?({ pages: [:index]  })).to be_truthy
+      expect(@role.any?({ pages: [:update] })).to be_truthy
+      expect(@role.any?({ pages: [:index, :update]})).to be_truthy
+      expect(@role.any?(undefined_section: [:index], pages:[:index])).to be_truthy
     end
 
     it "should has any rules 2" do
       expect(@role.has?(:pages,    :index)).to be_truthy
       expect(@role.has?(:articles, :index)).to be_falsey
 
-      expect(@role.any?({ pages:    :index })).to be_truthy
-      expect(@role.any?({ articles: :index })).to be_falsey
+      expect(@role.any?({ pages:    [:index] })).to be_truthy
+      expect(@role.any?({ articles: [:index] })).to be_falsey
 
-      expect(@role.any?({ articles: :index })).to be_falsey
-      expect(@role.any?({ pages: :index, articles: :index})).to be_truthy
-      expect(@role.any?({ pages: :index, pages:    :update})).to be_truthy
+      expect(@role.any?({ articles: [:index] })).to be_falsey
+      expect(@role.any?({ pages: [:index], articles: [:index]})).to be_truthy
+      expect(@role.any?({ pages: [:index, :update]})).to be_truthy
     end
 
     it "should has any rules 3, easy syntaxis" do
-      expect(@role.any?(articles: :index)).to be_falsey
-      expect(@role.any?(pages: :index, articles: :index)).to be_truthy
-      expect(@role.any?(pages: :index, pages:    :update)).to be_truthy
+      expect(@role.any?(articles: [:index])).to be_falsey
+      expect(@role.any?(pages: [:index], articles: [:index])).to be_truthy
+      expect(@role.any?(pages: [:index, :update])).to be_truthy
+    end
+
+    it "should hasn't any rules" do
+      expect(@role.any?(undefined_section:[:new])).to be_falsey
     end
   end
 end
