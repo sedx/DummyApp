@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 describe Role do
   context "Role *Create* methods" do
