@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.0.0'
 
 gem 'pg'
 gem 'mysql2'
@@ -43,9 +43,13 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
 
-  gem 'rspec', '~>3.1.0'
-  gem 'rspec-rails', '~> 3.1.0'
-  gem 'rspec-collection_matchers'
+  # gem 'rspec', '~>3.1.0'
+  # gem 'rspec-rails', '~> 3.1.0'
+  # gem 'rspec-collection_matchers'
+
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
 end
 
 # gem 'sprockets-rails', github: 'rails/sprockets-rails'

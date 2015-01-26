@@ -1,14 +1,16 @@
 require 'spec_helper'
+require 'pry'
 
 describe Role do
   context "Role *Create* methods" do
     it "New/Create invalid" do
       role = Role.new
       expect(role.save).to be_falsey
+      expect(role.errors.count).to eql(3)
 
-      expect(role).to have(1).error_on(:name)
-      expect(role).to have(1).error_on(:title)
-      expect(role).to have(1).error_on(:description)
+      expect( role.errors[:name].present?        ).to eql true
+      expect( role.errors[:title].present?       ).to eql true
+      expect( role.errors[:description].present? ).to eql true
     end
 
     it "New/Create valid, without Role hash" do
