@@ -16,17 +16,17 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
 
-#~~~~~~~~~~~~~~~~~ TheROle ~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~ TheRole ~~~~~~~~~~~~~~~~~#
 gem 'the_role',
   github: 'TheRole/TheRoleApi',
-  tag: 'v2.6'
+  branch: 'master'
   # path: '../TheRoleApi'
 
 gem 'the_role_bootstrap3_ui',
   github: 'TheRole/TheRoleManagePanelBootstrap3',
   branch: 'master'
   # path: "../TheRoleManagePanelBootstrap3"
-#~~~~~~~~~~~~~~~~~ TheROle ~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~ TheRole ~~~~~~~~~~~~~~~~~#
 
 # Other
 gem 'faker'

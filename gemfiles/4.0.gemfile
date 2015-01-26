@@ -19,7 +19,7 @@ gem 'autoprefixer-rails'
 #~~~~~~~~~~~~~~~~~ TheROle ~~~~~~~~~~~~~~~~~#
 gem 'the_role',
   github: 'TheRole/TheRoleApi',
-  tag: 'v2.6'
+  branch: 'master'
   # path: '../TheRoleApi'
 
 gem 'the_role_bootstrap3_ui',
