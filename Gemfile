@@ -6,6 +6,9 @@ gem 'pg'
 gem 'mysql2'
 gem 'sqlite3'
 
+# ruby >= 2.2
+gem 'test-unit' if RUBY_VERSION >= '2.2'
+
 # User Model
 gem 'devise'
 
