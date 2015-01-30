@@ -1,4 +1,4 @@
 class Role < ActiveRecord::Base
-  include TheRole::Role
+  include TheRole::Api::Role
   # acts_as_role
 end

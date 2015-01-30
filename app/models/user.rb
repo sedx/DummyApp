@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  include TheRole::User
+  include TheRole::Api::User
   # has_role
 
   # Setup accessible (or protected) attributes for your model
